@@ -18,7 +18,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && yarn rename:popup && yarn rename:options",
+    "build": "yarn build:react && yarn build:content_scripts",
+    "build:react": "react-scripts build && yarn rename:popup && yarn rename:options",
+    "build:content_scripts": "webpack --config webpack.content_scripts.config.ts",
     "rename:popup": "sed 's/root/popup/' build/index.html > build/popup.html",
     "rename:options": "sed -e 's/root/options/' build/index.html >  build/options.html",
     "test": "react-scripts test",
@@ -43,6 +45,9 @@
     ]
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.172"
+    "@types/chrome": "^0.0.172",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.4.0",
+    "webpack-cli": "^4.9.1"
   }
 }
