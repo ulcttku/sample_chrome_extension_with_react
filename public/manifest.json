@@ -8,5 +8,8 @@
     "default_popup": "popup.html"
   },
   "description": "React で Chrome 拡張機能を作るためのサンプル",
-  "options_page": "options.html"
+  "options_page": "options.html",
+  "permissions": [
+    "storage"
+  ]
 }
