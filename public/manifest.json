@@ -4,7 +4,8 @@
   "version": "0.0.1",
 
   "action": {
-    "default_title": "サンプルアプリ"
+    "default_title": "サンプルアプリ",
+    "default_popup": "popup.html"
   },
   "description": "React で Chrome 拡張機能を作るためのサンプル"
 }

@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && yarn rename:popup",
+    "rename:popup": "sed 's/root/popup/' build/index.html > build/popup.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
